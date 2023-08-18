@@ -41,7 +41,9 @@ form.addEventListener("submit", (evento) => {
 
         
 function criaElemento(item) {
+    var nomeInput = document.getElementById("nome").value;
 
+    if (nomeInput) {
         const novoItem = document.createElement("li");
         novoItem.classList.add("item");
 
@@ -55,6 +57,7 @@ function criaElemento(item) {
         novoItem.appendChild(botaoDeleta(item.id));
 
         lista.appendChild(novoItem);
+    }
 }
 
 
